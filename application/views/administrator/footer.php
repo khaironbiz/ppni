@@ -1,0 +1,1 @@
+<strong>Copyright &copy; <?php echo date('Y'); ?> <a target='_BLANK' href="https://hpii.or.id"> Himpunan Perawat Informatika Indonesia</a></strong>
