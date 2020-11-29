@@ -72,10 +72,7 @@
                                             <option value="<?= $m['lokasi_propinsi']; ?>" <?php echo  set_select('dpw', $m['lokasi_propinsi'], TRUE); ?>><?= $m['lokasi_nama']; ?></option>
                                         <?php endforeach; ?>
 
-                                        <?
-                                        endforeach
-                                        
-                                        ?>
+
                                     </select>
                                     <?= form_error('dpw', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>

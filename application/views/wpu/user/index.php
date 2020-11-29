@@ -44,9 +44,7 @@
                             <td>Universitas</td>
                             <td>: <?= $user['universitas']; ?></td>
                         </tr>
-                        <?
-                        $nama_provinsi   = $desa['lokasi_nama'];
-                        ?>
+
                         <tr>
                             <td>Alamat</td>
                             <td>: <?= $user['alamat'] . ", " . $kel['lokasi_nama']; ?></td>
