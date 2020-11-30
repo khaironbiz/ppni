@@ -56,6 +56,7 @@ class User extends CI_Controller
             )
         )->row_array();
 
+
         $this->load->view('wpu/templates/header', $data);
         $this->load->view('wpu/templates/sidebar', $data);
         $this->load->view('wpu/templates/topbar', $data);
@@ -63,7 +64,18 @@ class User extends CI_Controller
         $this->load->view('wpu/templates/footer');
     }
 
-
+    public function all()
+    {
+        $data['title'] = 'Data Anggota';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['provinsi'] = $this->Desa_model->ambil_provinsi();
+        $this->form_validation->set_rules('name', 'Full Name', 'required|trim');
+        $this->load->view('wpu/templates/header', $data);
+        $this->load->view('wpu/templates/sidebar', $data);
+        $this->load->view('wpu/templates/topbar', $data);
+        $this->load->view('wpu/user/all', $data);
+        $this->load->view('wpu/templates/footer');
+    }
     public function edit()
     {
         $data['title'] = 'Edit Profile';
@@ -87,6 +99,10 @@ class User extends CI_Controller
             $kel            = $this->input->post('kelurahan_id');
             $alamat         = $this->input->post('alamat');
             $email          = $this->input->post('email');
+            $kota_lahir     = $this->input->post('kota_lahir');
+            $tgl_lahir      = $this->input->post('tgl_lahir');
+            $hp             = $this->input->post('hp');
+            $telp           = $this->input->post('telp');
 
             // cek jika ada gambar yang akan diupload
             $upload_image = $_FILES['image']['name'];
@@ -122,6 +138,10 @@ class User extends CI_Controller
                 'kec'               => $kec,
                 'kel'               => $kel,
                 'alamat'            => $alamat,
+                'kota_lahir'        => $kota_lahir,
+                'tgl_lahir'         => $tgl_lahir,
+                'telp'              => $telp,
+                'hp'                => $hp,
             );
 
             $this->db->where('email', $email);

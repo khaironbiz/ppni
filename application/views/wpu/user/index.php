@@ -51,7 +51,7 @@
                         </tr>
                         <tr>
                             <td></td>
-                            <td>: <?= $kec['lokasi_nama'] . ", " . $kota['lokasi_nama'] . ", " . $prov['lokasi_nama']; ?></td>
+                            <td>: <?= $kec['lokasi_nama'] . ", " . $kota['lokasi_nama'] . ", " . $prov['lokasi_nama'] . ", " . $kel['id_pos']; ?></td>
                         </tr>
                         <tr>
                             <td>HP</td>

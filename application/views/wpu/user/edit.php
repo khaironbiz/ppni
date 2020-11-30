@@ -16,49 +16,39 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Gelar Depan</label>
-                <div class="col-sm-4">
-                    <input type="text" class="form-control" id="gelar_depan" name="gelar_depan" value="<?= $user['gelar_depan']; ?>">
+                <label for="name" class="col-sm-2 col-form-label">Nama</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="gelar_depan" name="gelar_depan" value="<?= $user['gelar_depan']; ?>" placeholder="Gelar depan">
+                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="name" name="name" value="<?= $user['name']; ?>" placeholder="Nama asli">
+                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="gelar_belakang" name="gelar_belakang" value="<?= $user['gelar_belakang']; ?>" placeholder="Gelar belakang">
                     <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
 
             </div>
+
             <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Nama Asli</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name" name="name" value="<?= $user['name']; ?>">
-                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Gelar Belakang</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="gelar_belakang" name="gelar_belakang" value="<?= $user['gelar_belakang']; ?>">
-                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Alamat (Provinsi)</label>
-                <div class="col-sm-10">
+                <label for="name" class="col-sm-2 col-form-label">Alamat</label>
+                <div class="col-sm-3">
                     <?php
                     $style_provinsi = 'class="form-control input-sm" id="provinsi_id"  onChange="tampilKabupaten()"';
                     echo form_dropdown('provinsi_id', $provinsi, '', $style_provinsi);
                     ?>
                     <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Alamat (Kabupaten)</label>
-                <div class="col-sm-10">
+                <div class="col-sm-3">
                     <?php
                     $style_kabupaten = 'class="form-control input-sm" id="kabupaten_id" onChange="tampilKecamatan()"';
                     echo form_dropdown("kabupaten_id", array('Pilih Kabupaten' => '- Pilih Kabupaten -'), '', $style_kabupaten);
                     ?>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Alamat (Kecamatan)</label>
-                <div class="col-sm-10">
+
+                <div class="col-sm-4">
                     <?php
                     $style_kecamatan = 'class="form-control input-sm" id="kecamatan_id" onChange="tampilKelurahan()"';
                     echo form_dropdown("kecamatan_id", array('Pilih Kecamatan' => '- Pilih Kecamatan -'), '', $style_kecamatan);
@@ -66,26 +56,48 @@
                     <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
             </div>
+
             <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Alamat (Kelurahan)</label>
-                <div class="col-sm-10">
+                <label for="name" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-3">
                     <?php
                     $style_kelurahan = 'class="form-control input-sm" id="kelurahan_id"';
                     echo form_dropdown("kelurahan_id", array('Pilih Kelurahan' => '- Pilih Kelurahan -'), '', $style_kelurahan);
                     ?>
                     <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $user['alamat']; ?>" placeholder="Jalan, No ruamah, RT/RW">
+                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Telp/HP</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="telp" name="telp" value="<?= $user['telp']; ?>" placeholder="Telp PSTN">
+                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="hp" name="hp" value="<?= $user['hp']; ?>" placeholder="HP">
+                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
             </div>
             <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Alamat (Jalan)</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $user['alamat']; ?>">
+                <label for="name" class="col-sm-2 col-form-label">TTL</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="kota_lahir" name="kota_lahir" value="<?= $user['kota_lahir']; ?>" placeholder="Tempat lahir">
+                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                </div>
+                <div class="col-sm-4">
+                    <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" value="<?= $user['tgl_lahir']; ?>">
                     <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-2">Foto</div>
-                <div class="col-sm-9">
+                <div class="col-sm-8">
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="image" name="image">
                         <label class="custom-file-label" for="image">Choose file</label>

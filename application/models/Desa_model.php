@@ -5,6 +5,10 @@ class Desa_model extends CI_Model
 {
     var $tabel_user     = 'user';
     var $tabel_desa     = 'id_desa';
+    var $tb_rovinsi     = 'prov';
+    var $tb_kota        = 'kabkot';
+    var $tb_kec         = 'kac';
+    var $tb_desa        = 'desa';
     public function getPropinsi()
     {
         $query = $this->db->get_where(
