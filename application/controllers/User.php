@@ -63,6 +63,15 @@ class User extends CI_Controller
         $this->load->view('wpu/user/index', $data);
         $this->load->view('wpu/templates/footer');
     }
+    public function profile()
+    {
+        $data['title'] = 'Data Anggota';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['provinsi'] = $this->Desa_model->ambil_provinsi();
+        $this->form_validation->set_rules('name', 'Full Name', 'required|trim');
+
+        $this->load->view('focus/user/profile', $data);
+    }
 
     public function all()
     {

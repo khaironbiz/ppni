@@ -9,7 +9,7 @@
                         <div class="card">
                             <div class="bootstrap-data-table-panel">
                                 <div class="table-responsive">
-                                    <table id="bootstrap-data-table-export" class="table table-hover">
+                                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
