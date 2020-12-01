@@ -207,36 +207,7 @@
                         </div>
                     </div>
                     <!-- /# column -->
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-title">
-                                <h4>Riwayat Organisasi</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-hover ">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Nama Organisasi</th>
-                                                <th>Jabatan</th>
-                                                <th>Mulai</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><span class="badge badge-primary">Ongoing</span></td>
-                                                <td>January 22</td>
-                                                <td class="color-primary">$21.56</td>
-                                            </tr>
 
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- /# column -->
                 </div>
             </section>
