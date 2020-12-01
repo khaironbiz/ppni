@@ -36,8 +36,8 @@
                                                     <td><?= $sm['hp']; ?></td>
                                                     <td><?= $sm['pendidikan']; ?></td>
                                                     <td>
-                                                        <a href="" class="badge badge-success">edit</a>
-                                                        <a href="" class="badge badge-danger">delete</a>
+                                                        <a href="" class="badge badge-success" title="edit">edit</a>
+                                                        <a href="" class="badge badge-danger" title="hapus">delete</i></a>
                                                     </td>
                                                 </tr>
                                                 <?php $i++; ?>
